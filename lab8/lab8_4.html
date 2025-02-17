@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Панель навигации БГУИР</title>
+    <style>
+        /* Основные стили для панели навигации */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        nav {
+            background-color: #333;
+            padding: 10px 0;
+            text-align: center;
+        }
+
+        nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+        }
+
+        nav ul li {
+            position: relative;
+            margin: 0 15px;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            padding: 10px 20px;
+            display: block;
+            transition: background-color 0.3s;
+        }
+
+        nav ul li a:hover {
+            background-color: #555;
+        }
+
+        /* Стили для выпадающего меню */
+        nav ul li ul {
+            display: none;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            background-color: #444;
+            padding: 0;
+            margin: 0;
+            list-style-type: none;
+            min-width: 200px; /* Ширина выпадающего меню */
+        }
+
+        nav ul li ul li {
+            margin: 0;
+        }
+
+        nav ul li ul li a {
+            padding: 10px 20px;
+            display: block;
+            color: white;
+            text-decoration: none;
+        }
+
+        nav ul li ul li a:hover {
+            background-color: #666;
+        }
+
+        nav ul li:hover ul {
+            display: block;
+        }
+
+        /* Стили для логотипов */
+        .logo {
+            display: none;
+            position: absolute;
+            top: 100%;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 100px;
+            height: auto;
+            border: 2px solid #000;
+        }
+
+        nav ul li:hover .logo {
+            display: block;
+        }
+
+        /* Убираем логотип для ФИТУ */
+        nav ul li.no-logo:hover .logo {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <!-- Горизонтальная панель навигации -->
+    <nav>
+        <ul>
+            <li class="no-logo"> <!-- Убираем логотип для ФИТУ -->
+                <a href="https://www.bsuir.by/ru/fitu">ФИТУ</a>
+                <ul>
+                    <li><a href="https://www.bsuir.by/ru/kaf-itas">Кафедра ИТАС</a></li>
+                    <li><a href="https://www.bsuir.by/ru/kaf-toe">Кафедра ТОЭ</a></li>
+                    <li><a href="https://www.bsuir.by/ru/kaf-iit">Кафедра ИИТ</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="https://www.bsuir.by/ru/fksis">ФКСиС</a>
+                    <img src="images\12_100229_1_175808.svg" class="logo" alt="Логотип ФКСиС">
+                </a>
+            </li>
+            <li>
+                <a href="https://www.bsuir.by/ru/fkp">ФКП</a>
+                    <img src="images\12_100229_1_159335.svg" class="logo" alt="Логотип ИЭ">
+                </a>
+            </li>
+            <li>
+                <a href="https://www.bsuir.by/ru/fre">ФРЭ</a>
+                    <img src="images\12_100229_1_159336.svg" class="logo" alt="Логотип ФРЭ">
+                </a>
+            </li>
+        </ul>
+    </nav>
+</body>

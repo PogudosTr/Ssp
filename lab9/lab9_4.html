@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+
+  <meta charset="utf-8">
+  <title>Задание 4</title>
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link href="//fonts.googleapis.com/css?family=Raleway:400,300,600" rel="stylesheet" type="text/css">
+
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/skeleton.css">
+
+  <link rel="icon" type="image/png" href="images/favicon.png">
+  <style>
+    body {
+      font-family: 'Raleway', sans-serif;
+    }
+
+    .nav-links a {
+      text-decoration: none;
+      color: #333;
+      padding: 5px 10px;
+      border: 1px solid transparent;
+    }
+    .nav-links a:hover {
+      border-color: #ccc;
+    }
+    h4 {
+      font-weight: 600;
+    }
+    p {
+      line-height: 1.6;
+    }
+    .container {
+      padding: 20px;
+    }
+
+    /* Единый стиль для границ */
+    .bordered {
+      border: 1px solid #ccc;
+    }
+
+    /* Дополнительные стили для ячеек */
+    .row > div {
+      border: 1px solid #ccc;
+      padding: 20px;
+      min-height: 100px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+
+    /* Убираем отступы у контейнера row */
+    .row {
+      margin: 0;
+    }
+  </style>
+
+</head>
+<body>
+
+  <div class="container">
+    <div class="row">
+      <div class="six columns bordered">
+        <img class="header-logo" src="12_100229_1_159338.svg" alt="Логотип факультета">
+      </div>
+      <div class="six columns bordered">
+        <nav class="nav-links">
+          <a href="#">Задание 1</a>
+          <a href="#">Задание 2</a>
+          <a href="#">Задание 3</a>
+        </nav>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="three columns bordered">
+        <h4>Свойство 1: grid-template-areas</h4>
+      </div>
+      <div class="three columns bordered">
+        <h4>Свойство 2: grid-template-columns</h4>
+      </div>
+      <div class="three columns bordered">
+        <h4>Свойство 3: grid-template-rows</h4>
+      </div>
+      <div class="three columns bordered">
+        <h4>Свойство 4: grid-gap</h4>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="three columns bordered grid-properties">
+        <p>Позволяет создавать именованные области сетки, которые затем используются для размещения элементов. grid-template-areas задает визуальную структуру сетки, определяя, какие области занимают те или иные элементы.</p>
+      </div>
+      <div class="three columns bordered grid-properties">
+        <p>Определяет количество и ширину столбцов в сетке. grid-template-columns может принимать значения в различных единицах измерения (px, %, em и т.д.), а также ключевые слова (auto, minmax и т.д.).</p>
+      </div>
+      <div class="three columns bordered grid-properties">
+        <p>Определяет количество и высоту строк в сетке. Аналогично grid-template-columns, grid-template-rows может принимать различные значения и единицы измерения.</p>
+      </div>
+      <div class="three columns bordered grid-properties">
+        <p>Управляет расстоянием между строками и столбцами сетки. grid-gap задает единое расстояние для обоих направлений, либо можно использовать grid-row-gap и grid-column-gap для отдельной настройки.</p>
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>

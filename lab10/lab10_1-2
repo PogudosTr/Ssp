@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Flexbox макет</title>
+<style>
+body {
+  font-family: sans-serif;
+}
+.container {
+  display: flex;
+  flex-direction: column; /* Располагаем элементы вертикально */
+}
+.header {
+  text-align: center;
+  padding: 20px;
+  background-color: #f0f0f0;
+}
+.content {
+  display: flex;
+  flex-wrap: wrap; /* Разрешаем перенос на новую строку */
+  padding: 20px;
+}
+.cell {
+  flex: 1; /* Все ячейки занимают равную долю пространства */
+  padding: 20px;
+  border: 1px solid #ccc;
+  box-sizing: border-box; /* Учитываем padding и border в общей ширине */
+}
+video, audio {
+  width: 100%;
+  max-width: 300px; /* Ограничиваем максимальную ширину видео/аудио */
+  margin: 10px auto; /* Центрируем видео/аудио */
+}
+</style>
+</head>
+<body>
+
+<div class="container">
+  <div class="header">
+    <h1>Заголовок</h1>
+  </div>
+  <div class="content">
+    <div class="cell">
+      <video src="video1.mp4" controls></video>
+      <video src="video2.mp4" controls></video>
+      <video src="video3.mp4" controls></video>
+    </div>
+    <div class="cell">
+      <h2>Flexbox верстка</h2>
+      <p>Flexbox - это мощный инструмент для создания гибких и адаптивных макетов веб-страниц.</p>
+    </div>
+    <div class="cell">
+      <audio src="audio1.mp3" controls></audio>
+      <audio src="audio2.mp3" controls></audio>
+      <audio src="audio3.mp3" controls></audio>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>

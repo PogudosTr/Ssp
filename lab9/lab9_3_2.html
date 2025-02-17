@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Grid-верстка (Макет 2)</title>
+<style>
+body {
+  display: grid;
+  grid-template-areas:
+    "header header header"
+    "nav article aside"
+    "footer footer footer";
+  grid-template-columns: 1fr 2fr 1fr;
+  grid-template-rows: auto 1fr auto;
+  min-height: 100vh;
+  margin: 0;
+  background-color: white; /* Белый фон для всего тела */
+  gap: 10px; /* Отступы между ячейками */
+  padding: 10px; /* Отступы от краев страницы */
+}
+
+nav {
+  grid-area: nav;
+  background-color: lightgreen; /* Зеленый фон для nav */
+}
+
+header {
+  grid-area: header;
+  background-color: lightgreen; /* Зеленый фон для header */
+}
+
+article {
+  grid-area: article;
+  background-color: lightgreen; /* Зеленый фон для article */
+}
+
+aside {
+  grid-area: aside;
+  background-color: lightgreen; /* Зеленый фон для aside */
+}
+
+footer {
+  grid-area: footer;
+  background-color: lightgreen; /* Зеленый фон для footer */
+  text-align: center;
+}
+
+/* Стиль для ссылок в nav */
+nav a {
+  display: block; /* чтобы ссылки занимали всю ширину nav */
+  padding: 10px;
+  text-decoration: none;
+  color: black;
+}
+</style>
+</head>
+<body>
+
+<header>
+  <h1>Content Header</h1>
+</header>
+
+<nav>
+  <a href="#">HTML5</a>
+  <a href="#">CSS3</a>
+  <a href="#">Grid-верстка</a>
+</nav>
+
+<article>
+  <h2>Content Article</h2>
+  <p>Произвольная информация о Grid-верстке...</p>
+</article>
+
+<aside>
+  <h2>Content Aside</h2>
+  <p>Дополнительная информация...</p>
+</aside>
+
+<footer>
+  <p>Выполнил: Погудо Владислав</p>
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Фотогалерея</title>
+    <style>
+        body {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            grid-gap: 10px;
+            margin: 0;
+            padding: 10px;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        .cell {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            background-color: #f9f9f9;
+            padding: 10px;
+            text-align: center;
+        }
+
+        .cell img {
+            max-width: 100%;
+            max-height: 100%;
+            border-radius: 5px;
+        }
+
+        .cell-9 {
+            grid-column: span 2;
+            grid-row: span 2;
+            background-color: #e0f7fa;
+        }
+
+        .cell-10 {
+            grid-column: span 2;
+            grid-row: span 2;
+            background-color: #fce4ec;
+            text-align: justify;
+            padding: 10px;
+        }
+
+        .cell-10 img {
+            float: left;
+            margin-right: 10px;
+            max-width: 40%;
+        }
+    </style>
+</head>
+<body>
+    <!-- Ячейки с номерами -->
+    <div class="cell">
+        <img src="https://skillbox.ru/upload/setka_images/02454825072024_c0c954a3a268bfc515e88839a41a25de5bd1b194.jpg" alt="Фото">
+        <p>Слон</p>
+    </div>
+    <div class="cell">
+        <img src="https://skillbox.ru/upload/setka_images/02454825072024_c0c954a3a268bfc515e88839a41a25de5bd1b194.jpg" alt="Фото">
+        <p>Слон</p>
+    </div>
+    <div class="cell">
+        <img src="https://skillbox.ru/upload/setka_images/02454825072024_c0c954a3a268bfc515e88839a41a25de5bd1b194.jpg" alt="Фото">
+        <p>Слон</p>
+    </div>
+    <div class="cell">
+        <img src="https://skillbox.ru/upload/setka_images/02454825072024_c0c954a3a268bfc515e88839a41a25de5bd1b194.jpg" alt="Фото">
+        <p>Слон</p>
+    </div>
+    <div class="cell">
+        <img src="https://skillbox.ru/upload/setka_images/02454825072024_c0c954a3a268bfc515e88839a41a25de5bd1b194.jpg" alt="Фото">
+        <p>Слон</p>
+    </div>
+    <div class="cell">
+        <img src="https://skillbox.ru/upload/setka_images/02454825072024_c0c954a3a268bfc515e88839a41a25de5bd1b194.jpg" alt="Фото">
+        <p>Слон</p>
+    </div>
+    <div class="cell">
+        <img src="https://skillbox.ru/upload/setka_images/02454825072024_c0c954a3a268bfc515e88839a41a25de5bd1b194.jpg" alt="Фото">
+        <p>Слон</p>
+    </div>
+    <div class="cell">
+        <img src="https://skillbox.ru/upload/setka_images/02454825072024_c0c954a3a268bfc515e88839a41a25de5bd1b194.jpg" alt="Фото">
+        <p>Слон</p>
+    </div>
+    <div class="cell cell-9">
+        <!-- GIF изображение -->
+        <img src="https://media.giphy.com/media/3o7aD2saalBwwftBIY/giphy.gif" alt="GIF">
+    </div>
+    <div class="cell cell-10">
+        <!-- Фото с обтеканием текста -->
+        <img src="https://avatars.dzeninfra.ru/get-zen_doc/1590365/pub_5dff29d91ee34f00afdf303e_5dff2a35fc69ab00aedba61e/scale_1200" alt="Фото">
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus venenatis velit nec neque feugiat, at rutrum justo vestibulum. Donec tincidunt sem sit amet diam porta, non dapibus justo pharetra.</p>
+    </div>
+    <div class="cell">
+        <img src="https://skillbox.ru/upload/setka_images/02454825072024_c0c954a3a268bfc515e88839a41a25de5bd1b194.jpg" alt="Фото">
+        <p>Слон</p>
+    </div>
+    <div class="cell">
+        <img src="https://skillbox.ru/upload/setka_images/02454825072024_c0c954a3a268bfc515e88839a41a25de5bd1b194.jpg" alt="Фото">
+        <p>Слон</p>
+    </div>
+    <div class="cell">
+        <img src="https://skillbox.ru/upload/setka_images/02454825072024_c0c954a3a268bfc515e88839a41a25de5bd1b194.jpg" alt="Фото">
+        <p>Слон</p>
+    </div>
+    <div class="cell">
+        <img src="https://skillbox.ru/upload/setka_images/02454825072024_c0c954a3a268bfc515e88839a41a25de5bd1b194.jpg" alt="Фото">
+        <p>Слон</p>
+    </div>
+</body>
+</html>

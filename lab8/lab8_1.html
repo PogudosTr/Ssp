@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Лабораторная работа</title>
+    <style>
+        /* Основная структура */
+        body {
+            display: flex;
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        /* Стили для основного контента (теперь слева) */
+        main {
+            flex: 1;
+            padding: 20px;
+        }
+
+        main h1 {
+            color: #333;
+        }
+
+        main p {
+            line-height: 1.6;
+        }
+
+        /* Стили для бокового меню (теперь справа) */
+        aside {
+            width: 200px;
+            background-color: #f4f4f4;
+            padding: 20px;
+            box-shadow: -2px 0 5px rgba(0, 0, 0, 0.1);
+        }
+
+        aside nav ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        aside nav ul li {
+            margin-bottom: 10px;
+        }
+
+        /* Стили для гиперссылок */
+        aside nav ul li a {
+            text-decoration: none; /* Убираем подчеркивание */
+            color: red; /* Непосещенная ссылка красного цвета */
+        }
+
+        aside nav ul li a:visited {
+            color: #8B0000; /* После посещения цвет меняется на #8B0000 */
+        }
+
+        aside nav ul li a:hover {
+            color: green; /* При наведении ссылка становится зеленой */
+        }
+
+        aside nav ul li a:active {
+            color: rgb(184, 134, 11); /* При нажатии ссылка становится цвета rgb(184, 134, 11) */
+        }
+    </style>
+</head>
+<body>
+    <!-- Основной контент (теперь слева) -->
+    <main>
+        <h1>Свойства CSS</h1>
+        <p>
+            CSS (Cascading Style Sheets) — это язык стилей, используемый для описания внешнего вида документа, написанного на HTML. С помощью CSS можно управлять цветом, шрифтами, отступами, размерами и другими аспектами оформления веб-страниц.
+        </p>
+        <p>
+            Некоторые основные свойства CSS:
+        </p>
+        <ul>
+            <li><strong>color</strong> - задает цвет текста.</li>
+            <li><strong>font-family</strong> - определяет шрифт текста.</li>
+            <li><strong>margin</strong> - устанавливает внешние отступы.</li>
+            <li><strong>padding</strong> - задает внутренние отступы.</li>
+            <li><strong>background-color</strong> - определяет цвет фона элемента.</li>
+        </ul>
+    </main>
+
+    <!-- Боковое меню (теперь справа) -->
+    <aside>
+        <nav>
+            <ul>
+                <li><a href="#task1">Задание 1.1</a></li>
+                <li><a href="#task2">Задание 1.2</a></li>
+                <li><a href="#task3">Задание 1.3</a></li>
+                <li><a href="#task4">Задание 1.4</a></li>
+            </ul>
+        </nav>
+    </aside>
+</body>
+</html>
