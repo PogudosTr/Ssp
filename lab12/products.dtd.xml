@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE products [
+    <!ENTITY tshirt "Хлопковая футболка">
+    <!ENTITY mug "Керамическая кружка">
+    <!ENTITY notebook "Блокнот в твердом переплете">
+    <!ENTITY phonecase "Силиконовый чехол для телефона">
+    <!ENTITY hoodie "Теплая толстовка">
+    <!ELEMENT products (product*)>
+    <!ELEMENT product (name, description, price, category, image)>
+    <!ATTLIST product id ID #REQUIRED>  <!ELEMENT name (#PCDATA)>
+    <!ELEMENT description (#PCDATA)>
+    <!ELEMENT price (#PCDATA)>
+    <!ELEMENT category (#PCDATA)>
+    <!ELEMENT image (#PCDATA)>
+]>
+<?xml-stylesheet type="text/css" href="style.css"?>
+<products>
+    <product id="prod1">
+        <name>Футболка "Java"</name>
+        <description>&tshirt; с логотипом Java.</description>
+        <price>19.99</price>
+        <category>Одежда</category>
+        <image>images/java-tshirt.jpg</image>
+    </product>
+    <product id="prod2">
+        <name>Кружка "Python"</name>
+        <description>&mug; с логотипом Python.</description>
+        <price>9.99</price>
+        <category>Посуда</category>
+        <image>images/python-mug.jpg</image>
+    </product>
+    <product id="prod3">
+        <name>Блокнот "JavaScript"</name>
+        <description>&notebook; с логотипом JavaScript.</description>
+        <price>4.99</price>
+        <category>Канцелярия</category>
+        <image>images/javascript-notebook.jpg</image>
+    </product>
+    <product id="prod4">
+        <name>Чехол для телефона "C++"</name>
+        <description>&phonecase; с логотипом C++.</description>
+        <price>14.99</price>
+        <category>Аксессуары</category>
+        <image>images/cpp-phonecase.jpg</image>
+    </product>
+    <product id="prod5">
+        <name>Толстовка "PHP"</name>
+        <description>&hoodie; с логотипом PHP.</description>
+        <price>39.99</price>
+        <category>Одежда</category>
+        <image>images/php-hoodie.jpg</image>
+    </product>
+</products>

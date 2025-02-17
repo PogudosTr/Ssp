@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="students.xsl"?>
+<students>
+    <student>
+        <name>Иванов Иван</name>
+        <group>123</group>
+        <grade>3</grade>
+    </student>
+    <student>
+        <name>Петров Петр</name>
+        <group>123</group>
+        <grade>5</grade>
+    </student>
+    <student>
+        <name>Сидоров Сидор</name>
+        <group>456</group>
+        <grade>9</grade>
+    </student>
+    <student>
+        <name>Смирнова Анна</name>
+        <group>456</group>
+        <grade>7</grade>
+    </student>
+    <student>
+        <name>Кузнецова Мария</name>
+        <group>789</group>
+        <grade>2</grade>
+    </student>
+    <student>
+        <name>Соколова Елена</name>
+        <group>789</group>
+        <grade>10</grade>
+    </student>
+</students>

@@ -1,0 +1,29 @@
+products {
+    display: table;
+    border-collapse: collapse;
+    margin: 10px;
+}
+
+product {
+    display: table-row;
+}
+
+name, description, price, category, image {
+    display: table-cell;
+    border: 1px solid black;
+    padding: 5px;
+    text-align: center;
+}
+
+name {
+    font-weight: bold;
+}
+
+image {
+    text-align: center;
+}
+
+image img {
+    max-width: 100px;
+    height: auto;
+}

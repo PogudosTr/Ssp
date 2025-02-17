@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/css" href="style.css"?>
+<products>
+    <product id="1">
+        <name>Футболка "Java"</name>
+        <description>Хлопковая футболка с логотипом Java.</description>
+        <price>19.99</price>
+        <category>Одежда</category>
+        <image>images/java-tshirt.jpg</image>
+    </product>
+    <product id="2">
+        <name>Кружка "Python"</name>
+        <description>Керамическая кружка с логотипом Python.</description>
+        <price>9.99</price>
+        <category>Посуда</category>
+        <image>images/python-mug.jpg</image>
+    </product>
+    <product id="3">
+        <name>Блокнот "JavaScript"</name>
+        <description>Блокнот в твердом переплете с логотипом JavaScript.</description>
+        <price>4.99</price>
+        <category>Канцелярия</category>
+        <image>images/javascript-notebook.jpg</image>
+    </product>
+    <product id="4">
+        <name>Чехол для телефона "C++"</name>
+        <description>Силиконовый чехол для телефона с логотипом C++.</description>
+        <price>14.99</price>
+        <category>Аксессуары</category>
+        <image>images/cpp-phonecase.jpg</image>
+    </product>
+    <product id="5">
+        <name>Толстовка "PHP"</name>
+        <description>Теплая толстовка с логотипом PHP.</description>
+        <price>39.99</price>
+        <category>Одежда</category>
+        <image>images/php-hoodie.jpg</image>
+    </product>
+</products>
