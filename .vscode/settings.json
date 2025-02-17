@@ -1,0 +1,10 @@
+{
+    "liveSassCompile.settings.formats": [
+        {
+        "format": "expanded",
+        "extensionName": ".css",
+        "savePath": "lab11/css"
+        }
+    ],
+    "compile-hero.disable-compile-files-on-did-save-code": false
+}
