@@ -1,61 +1,232 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-<title>Flexbox макет</title>
-<style>
-body {
-  font-family: sans-serif;
-}
-.container {
-  display: flex;
-  flex-direction: column; /* Располагаем элементы вертикально */
-}
-.header {
-  text-align: center;
-  padding: 20px;
-  background-color: #f0f0f0;
-}
-.content {
-  display: flex;
-  flex-wrap: wrap; /* Разрешаем перенос на новую строку */
-  padding: 20px;
-}
-.cell {
-  flex: 1; /* Все ячейки занимают равную долю пространства */
-  padding: 20px;
-  border: 1px solid #ccc;
-  box-sizing: border-box; /* Учитываем padding и border в общей ширине */
-}
-video, audio {
-  width: 100%;
-  max-width: 300px; /* Ограничиваем максимальную ширину видео/аудио */
-  margin: 10px auto; /* Центрируем видео/аудио */
-}
-</style>
+    <title>Flexbox макет с адаптивным меню и фотогалереей</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
+    <style>
+        body {
+            font-family: sans-serif;
+        }
+
+        .container {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px;
+            background-color: #f0f0f0;
+        }
+
+        .header h1 {
+            margin: 0;
+        }
+
+        .menu {
+            display: flex;
+            justify-content: center;
+            padding: 10px;
+        }
+
+        .menu a {
+            display: block;
+            padding: 10px;
+            margin: 0 10px;
+            text-decoration: none;
+            color: #333;
+        }
+
+        .menu a:hover {
+            background-color: #f0f0f0;
+        }
+
+        .hamburger {
+            display: none;
+            cursor: pointer;
+            padding: 10px;
+        }
+
+        .hamburger div {
+            width: 25px;
+            height: 3px;
+            background-color: #333;
+            margin: 5px 0;
+        }
+
+        .content {
+            display: flex;
+            flex-wrap: wrap;
+            padding: 20px;
+        }
+
+        .cell {
+            flex: 1;
+            padding: 20px;
+            border: 1px solid #ccc;
+            box-sizing: border-box;
+        }
+
+        video,
+        audio {
+            width: 100%;
+            max-width: 300px;
+            margin: 10px auto;
+        }
+
+        @media (max-width: 768px) {
+            .menu {
+                display: none;
+                flex-direction: column;
+                position: absolute;
+                top: 60px;
+                left: 0;
+                width: 100%;
+                background-color: #f0f0f0;
+                z-index: 1;
+            }
+
+            .menu a {
+                margin: 5px 0;
+                text-align: center;
+            }
+
+            .hamburger {
+                display: block;
+            }
+
+            .content {
+                flex-direction: column;
+            }
+        }
+
+        .gallery {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            padding: 20px;
+        }
+
+        .gallery-item {
+            margin: 10px;
+            text-align: center;
+        }
+
+        .gallery-item img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        .caption {
+            margin-top: 5px;
+            color: blue;
+        }
+
+        /* Внутреннее подключение медиазапроса */
+        @media (max-width: 480px) {
+            .caption {
+                color: red;
+            }
+
+            .gallery {
+                flex-direction: column;
+            }
+
+            .gallery-item {
+                flex: 1;
+            }
+        }
+        /* Импорт медиазапроса */
+        @import url("style768.css");
+        /* Медиазапрос из внешнего файла (style1280.css) подключается в head */
+    </style>
+    <link rel="stylesheet" href="style1280.css" media="(min-width: 1280px)">
 </head>
+
 <body>
 
-<div class="container">
-  <div class="header">
-    <h1>Заголовок</h1>
-  </div>
-  <div class="content">
-    <div class="cell">
-      <video src="video1.mp4" controls></video>
-      <video src="video2.mp4" controls></video>
-      <video src="video3.mp4" controls></video>
+    <div class="container">
+        <div class="header">
+            <h1>Заголовок</h1>
+            <div class="hamburger" onclick="toggleMenu()">
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+        </div>
+        <div class="menu" id="menu">
+            <a href="#">Ссылка 1</a>
+            <a href="#">Ссылка 2</a>
+            <a href="#">Ссылка 3</a>
+            <a href="#">Ссылка 4</a>
+        </div>
+        <div class="content">
+            <div class="cell">
+                <video src="video1.mp4" controls></video>
+                <video src="video2.mp4" controls></video>
+                <video src="video3.mp4" controls></video>
+            </div>
+            <div class="cell">
+                <h2>Flexbox верстка</h2>
+                <p>Flexbox - это мощный инструмент для создания гибких и адаптивных макетов веб-страниц.</p>
+            </div>
+            <div class="cell">
+                <audio src="audio1.mp3" controls></audio>
+                <audio src="audio2.mp3" controls></audio>
+                <audio src="audio3.mp3" controls></audio>
+            </div>
+        </div>
+        <div class="gallery">
+            <div class="gallery-item">
+                <img src="image1.jpg" alt="Image 1">
+                <div class="caption">Caption 1</div>
+            </div>
+            <div class="gallery-item">
+                <img src="image2.jpg" alt="Image 2">
+                <div class="caption">Caption 2</div>
+            </div>
+            <div class="gallery-item">
+                <img src="image3.jpg" alt="Image 3">
+                <div class="caption">Caption 3</div>
+            </div>
+            <div class="gallery-item">
+                <img src="image4.jpg" alt="Image 4">
+                <div class="caption">Caption 4</div>
+            </div>
+            <div class="gallery-item">
+                <img src="image5.jpg" alt="Image 5">
+                <div class="caption">Caption 5</div>
+            </div>
+            <div class="gallery-item">
+                <img src="image6.jpg" alt="Image 6">
+                <div class="caption">Caption 6</div>
+            </div>
+            <div class="gallery-item">
+                <img src="image7.jpg" alt="Image 7">
+                <div class="caption">Caption 7</div>
+            </div>
+            <div class="gallery-item">
+                <img src="image8.jpg" alt="Image 8">
+                <div class="caption">Caption 8</div>
+            </div>
+        </div>
     </div>
-    <div class="cell">
-      <h2>Flexbox верстка</h2>
-      <p>Flexbox - это мощный инструмент для создания гибких и адаптивных макетов веб-страниц.</p>
-    </div>
-    <div class="cell">
-      <audio src="audio1.mp3" controls></audio>
-      <audio src="audio2.mp3" controls></audio>
-      <audio src="audio3.mp3" controls></audio>
-    </div>
-  </div>
-</div>
+
+    <script>
+        function toggleMenu() {
+            var menu = document.getElementById("menu");
+            if (menu.style.display === "flex") {
+                menu.style.display = "none";
+            } else {
+                menu.style.display = "flex";
+            }
+        }
+    </script>
 
 </body>
+
 </html>
